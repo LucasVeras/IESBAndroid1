@@ -1,3 +1,16 @@
 <resources>
+    <string name="register_title">Novo Usuário</string>
+    <string name="login_title">Login</string>
+    <string name="forgot_password_title">Redefinir a senha</string>
+
     <string name="app_name">ProjetoFinal</string>
+    <string name="login_description">IESB Aluno Online</string>
+    <string name="email">Email</string>
+    <string name="password">Senha</string>
+    <string name="confirm_password">Confirme a senha</string>
+    <string name="register">Cadastro</string>
+    <string name="forgotPassword">Esqueci a senha</string>
+
+    <string name="to_register">Cadastrar</string>
+    <string name="to_reset">Redefinir</string>
 </resources>

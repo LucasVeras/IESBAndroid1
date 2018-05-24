@@ -9,13 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+
+        <activity
+            android:name=".activities.MainActivity_"
+            android:label="@string/login_title">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activities.RegisterActivity_"
+            android:label="@string/register_title"
+            android:parentActivityName=".activities.MainActivity_" />
+
+        <activity
+            android:name=".activities.ForgotPasswordActivity_"
+            android:label="@string/forgot_password_title"
+            android:parentActivityName=".activities.MainActivity_" />
+
     </application>
 
 </manifest>
