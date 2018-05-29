@@ -13,4 +13,9 @@
 
     <string name="to_register">Cadastrar</string>
     <string name="to_reset">Redefinir</string>
+    <string name="to_login">Entrar</string>
+
+    // MENSAGENS DE VALIDAÇÃO
+    <string name="register_field_null">Campos obrigatórios.</string>
+    <string name="email_invalid">Email inválido.</string>
 </resources>
