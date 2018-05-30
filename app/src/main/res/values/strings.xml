@@ -9,13 +9,22 @@
     <string name="password">Senha</string>
     <string name="confirm_password">Confirme a senha</string>
     <string name="register">Cadastro</string>
-    <string name="forgotPassword">Esqueci a senha</string>
+    <string name="forgot_password">Esqueci a senha</string>
+    <string name="register_success">Usuário cadastrado com sucesso.</string>
 
     <string name="to_register">Cadastrar</string>
     <string name="to_reset">Redefinir</string>
     <string name="to_login">Entrar</string>
 
-    // MENSAGENS DE VALIDAÇÃO
+    // VALIDATION MESSAGES
+    <string name="required_email">Email obrigatório.</string>
     <string name="register_field_null">Campos obrigatórios.</string>
     <string name="email_invalid">Email inválido.</string>
+    <string name="login_invalid">Email e/ou senha inválido.</string>
+    <string name="password_and_confirmation_diferent">A senha e a confirmação da senha devem ser iguais.</string>
+    <string name="password_at_least_one_uppercase">A senha precisa ter pelo menos uma letra maiuscula.</string>
+    <string name="password_at_least_one_digit">A senha precisa ter pelo menos um dígito.</string>
+    <string name="password_at_least_one_special_caracter">A senha precisa ter pelo menos um caracter especial.</string>
+    <string name="password_invalid_length">A senha deve ter no mínimo 6 caracteres.</string>
+    <string name="email_already_registered">Esse email ja foi cadastrado anteriormente.</string>
 </resources>

@@ -14,7 +14,7 @@ interface UserDao {
     val all: List<User>
 
     @Query("SELECT * FROM user WHERE email LIKE :email LIMIT 1")
-    fun findByEmail(email: String): User
+    fun findByEmail(email: String): User?
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertUsers(vararg users: User): List<Long>

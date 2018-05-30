@@ -1,0 +1,4 @@
+<resources>
+    <dimen name="progress_dialog_width">160dp</dimen>
+    <dimen name="progress_dialog_height">160dp</dimen>
+</resources>
