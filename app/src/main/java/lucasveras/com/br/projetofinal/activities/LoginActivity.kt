@@ -1,13 +1,14 @@
 package lucasveras.com.br.projetofinal.activities
 
+import android.content.Intent
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_login.*
 import lucasveras.com.br.projetofinal.R
 import lucasveras.com.br.projetofinal.Util.Util
 import org.androidannotations.annotations.*
 
-@EActivity(R.layout.activity_main)
-open class MainActivity : BaseActivity() {
+@EActivity(R.layout.activity_login)
+open class LoginActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         setTheme(R.style.AppTheme)
@@ -25,7 +26,9 @@ open class MainActivity : BaseActivity() {
             if (userInDb == null || !userInDb.password.equals(passwordEditText.text.toString())){
                 Util.showToast(this, getString(R.string.login_invalid))
             }else{
-                Util.showToast(this, "LOGIN REALIZADO COM SUCESSO")
+                NewsListActivity_.intent(this)
+                        .flags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                        .start()
             }
         }
     }

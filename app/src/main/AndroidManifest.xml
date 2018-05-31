@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".activities.MainActivity_"
+            android:name=".activities.LoginActivity_"
             android:label="@string/login_title">
 
             <intent-filter>
@@ -24,12 +24,17 @@
         <activity
             android:name=".activities.RegisterActivity_"
             android:label="@string/register_title"
-            android:parentActivityName=".activities.MainActivity_" />
+            android:parentActivityName=".activities.LoginActivity_" />
 
         <activity
             android:name=".activities.ForgotPasswordActivity_"
             android:label="@string/forgot_password_title"
-            android:parentActivityName=".activities.MainActivity_" />
+            android:parentActivityName=".activities.LoginActivity_" />
+
+        <activity
+            android:name=".activities.NewsListActivity_"
+            android:label="@string/news_title"
+            android:parentActivityName=".activities.LoginActivity_" />
 
     </application>
 

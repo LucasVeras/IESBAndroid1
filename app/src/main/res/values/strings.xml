@@ -2,6 +2,7 @@
     <string name="register_title">Novo Usuário</string>
     <string name="login_title">Login</string>
     <string name="forgot_password_title">Redefinir a senha</string>
+    <string name="news_title">Notícias</string>
 
     <string name="app_name">ProjetoFinal</string>
     <string name="login_description">IESB Aluno Online</string>
