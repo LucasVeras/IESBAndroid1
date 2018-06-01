@@ -3,9 +3,9 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
-//apply plugin: 'kotlin-kapt' and kapt "android.arch.persistence.room:compiler:1.0.0-alpha1"
-
-def room_version = "1.0.0-rc1"
+def AAVersion = '4.4.0'
+def roomVersion = '1.0.0-rc1'
+def androidSupportVersion = '27.1.1'
 
 android {
     compileSdkVersion 27
@@ -16,6 +16,12 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = ['resourcePackageName': android.defaultConfig.applicationId]
+            }
+        }
     }
     buildTypes {
         release {
@@ -25,22 +31,36 @@ android {
     }
 }
 
+androidExtensions {
+    experimental = true
+}
+
+kapt {
+    correctErrorTypes = true
+}
+
 dependencies {
-    // Android ROOM
-    implementation "android.arch.persistence.room:runtime:$room_version"
-    kapt "android.arch.persistence.room:compiler:$room_version"
 
-    // Android Annotations
-    kapt "org.androidannotations:androidannotations:4.4.0"
-    annotationProcessor "org.androidannotations:androidannotations:4.4.0"
-    implementation "org.androidannotations:androidannotations-api:4.4.0"
+    //Android Annotations + Kotlin
+    kapt "org.androidannotations:androidannotations:$AAVersion"
+    annotationProcessor "org.androidannotations:androidannotations:$AAVersion"
+    implementation "org.androidannotations:androidannotations-api:$AAVersion"
 
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    implementation 'com.android.support:appcompat-v7:27.1.1'
+    //Cardview
+    implementation "com.android.support:cardview-v7:$androidSupportVersion"
+
+    //Persistência
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+    kapt "android.arch.persistence.room:compiler:$roomVersion"
+
+    //Default dependencies
+    implementation "com.android.support:design:$androidSupportVersion"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+    implementation "com.android.support:appcompat-v7:$androidSupportVersion"
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    androidTestCompile 'com.android.support:support-annotations:27.1.1'
+    implementation 'com.android.support:recyclerview-v7:27.1.1'
 }

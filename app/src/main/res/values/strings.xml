@@ -3,6 +3,7 @@
     <string name="login_title">Login</string>
     <string name="forgot_password_title">Redefinir a senha</string>
     <string name="news_title">Notícias</string>
+    <string name="news_detail_title">Detalhe</string>
 
     <string name="app_name">ProjetoFinal</string>
     <string name="login_description">IESB Aluno Online</string>
@@ -28,4 +29,10 @@
     <string name="password_at_least_one_special_caracter">A senha precisa ter pelo menos um caracter especial.</string>
     <string name="password_invalid_length">A senha deve ter no mínimo 6 caracteres.</string>
     <string name="email_already_registered">Esse email ja foi cadastrado anteriormente.</string>
+
+
+    // MOCK
+    <string name="apple_description_news">A Apple informou ter recebido até 16.249 pedidos de segurança nacional que afetaram até 8.249 contas durante o segundo semestre de 2017. O número de solicitações aumentou 20% em relação ao primeiro semestre de 2017, quando a Apple recebeu 13.499 solicitações desse tipo.</string>
+    <string name="swift_description_news">Chris Lattner, um veterano da Apple, anunciou nesta terça-feira (10) que está deixando a companhia após mais de uma década trabalhando para a Maçã. Ele se tornou muito conhecido perante a comunidade de desenvolvimento por ser a figura por trás da linguagem de programação Swift.</string>
+    <string name="android_description_news">Finalmente, o Google anunciou o nome e mais detalhes sobre a oitava versão do Android. O nome escolhido para essa versão foi Oreo, fechando assim a etapa de rumores a respeito do sabor que seria escolhido pela empresa. A fase Alpha foi aberta em 21 de março, e em maio o SO recebeu um grande update incremental.</string>
 </resources>

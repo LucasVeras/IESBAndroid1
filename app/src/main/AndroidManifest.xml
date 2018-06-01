@@ -36,6 +36,11 @@
             android:label="@string/news_title"
             android:parentActivityName=".activities.LoginActivity_" />
 
+        <activity
+            android:name=".activities.NewsDetailActivity_"
+            android:label="@string/news_detail_title"
+            android:parentActivityName=".activities.NewsListActivity_" />
+
     </application>
 
 </manifest>
